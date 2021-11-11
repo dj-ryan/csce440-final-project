@@ -1,5 +1,10 @@
 
-# CSCE 440/840 Final Project Fall 2021
+# Final project for CSCE 440 - Fall 2021
+
+## Group Members:
+- Bethany Krull
+- Sajal Risal
+- David Ryan
 
 This project can be done as a group project with two or three students in a group.
 1. (15 points) Data Collection: Select any topic that you are interested in.
@@ -14,7 +19,7 @@ alternative algorithms (or three for groups of three students) to process your
 data. You can select algorithms from any of the following groups (as suitable
 to your data):
 
-- (a) Function interpolation methods. [Open for undergraduates only]
+  - (a) Function interpolation methods. [Open for undergraduates only]
 (These include Lagrange Interpolation Method, Newton’s Divided Differ-
 ences Method, Piecewise Linear Interpolation, Piecewise Linear Approx-
 imation, Piecewise Quadratic Interpolation, Cubic Spline Interpolation).
@@ -22,24 +27,24 @@ imation, Piecewise Quadratic Interpolation, Cubic Spline Interpolation).
 Method, which were implemented in an earlier homework, then you need
 to implement two new methods beside those.)
 
-- (b) Spatial interpolation methods. (These include Shape Function Inter-
+  - (b) Spatial interpolation methods. (These include Shape Function Inter-
 polation, Inverse Distance Weighting, and Bezier Interpolation.)
 
-- (c) Numerical integration methods. (These include the Upper and Lower
+  - (c) Numerical integration methods. (These include the Upper and Lower
 Bound Sum of Rectangles Methods, the Trapezoid Method, Simpson’s
 Method, Romberg’s Method, and the Monte Carlo Method.) In the com-
 parison, compare the accuracy using the same number of intervals and/or
 the computational complexity.
 
-- (d) Methods of evaluating systems of linear equations. (These include
+  - (d) Methods of evaluating systems of linear equations. (These include
 the naive Gaussian Method, and the Partial Pivoting Method.) In the
 comparison of these methods, give the residual errors and the condition
 numbers.
 
-- (e) Least squares approximation methods. (These include, linear, poly-
+  - (e) Least squares approximation methods. (These include, linear, poly-
 nomial and exponential least squares approximations.)
 
-- (f) Any other pair of numerical algorithms. (For example, root finding
+  - (f) Any other pair of numerical algorithms. (For example, root finding
 methods. These need to be checked and approved by the instructor).
 
 
