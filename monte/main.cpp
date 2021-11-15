@@ -4,10 +4,11 @@
 #include <vector>
 #include <string>
 
+
 #include <chrono>
 #include <random>
 
-struct max_min
+struct Extrema
 {
     int max;
     int min;
@@ -75,7 +76,7 @@ int main(int argc, char const *argv[])
 
     // std::pair<int, int> maxMin = {0, 0};
 
-    struct max_min extrema = {0, 0};
+    struct Extrema extrema = {0, 0};
 
     // find max and min values
     for (int i = 0; i < data.size(); i++)
@@ -92,10 +93,7 @@ int main(int argc, char const *argv[])
     }
 
     // print max and min
-    std::cout << "max: " << extrema.max << std::endl;
-    std::cout << "min: " << extrema.min << std::endl;
 
-    // TODO: loop through values and randomly ping up
 
     std::random_device rand;
     std::mt19937 generate(rand());
@@ -103,9 +101,10 @@ int main(int argc, char const *argv[])
 
     int length = data.size();
     int guess = 0, dataPoint = 0;
-    double hit = 0;
-    int accuracy = 100;
-    double totalGuesses = accuracy * length;
+    double hit = 0; // total hits
+    int accuracy = 100; // the number of guesses for each data point
+    double totalGuesses = accuracy * length; // the number of guesses we will make
+    double area = extrema.max * length; // the total area of the data 
 
     for (int i = 0; i < length; i++)
     {
@@ -129,13 +128,17 @@ int main(int argc, char const *argv[])
 
     std::cout << "======== REPORT =========" << std::endl;
 
+    std::cout << "max: " << extrema.max << std::endl;
+    std::cout << "min: " << extrema.min << std::endl;
+    std::cout << "area: " << area << std::endl;
+
     std::cout << "length: " << length << " | accuracy: " << accuracy << " | Total guesses: " << totalGuesses << std::endl;
 
     std::cout << "Ratio: " << ratio << " | Hits: " << hit <<
 
         std::endl;
     
-    std::cout << "AREA: " << ratio * (extrema.max * length) << std::endl;
+    std::cout << "AREA: " << ratio * area << std::endl;
 
     return 0;
 }
