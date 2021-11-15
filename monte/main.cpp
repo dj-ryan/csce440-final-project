@@ -56,8 +56,6 @@ int main(int argc, char const *argv[])
 {
     /* code */
 
-    //std::ifstream f("data.csv");
-
     std::filebuf fb;
 
     fb.open("data.csv", std::ios::in);
@@ -67,14 +65,6 @@ int main(int argc, char const *argv[])
     std::vector<std::vector<std::string>> data;
 
     data = readCSV(is);
-
-    // print test output
-    // std::cout << data.size() << std::endl;
-    // std::cout << data.at(0).size()
-    //           << std::endl;
-    // std::cout << data.at(2).at(1) << std::endl;
-
-    // std::pair<int, int> maxMin = {0, 0};
 
     struct Extrema extrema = {0, 0};
 
@@ -91,8 +81,6 @@ int main(int argc, char const *argv[])
             extrema.min = dataPoint;
         };
     }
-
-    // print max and min
 
 
     std::random_device rand;
