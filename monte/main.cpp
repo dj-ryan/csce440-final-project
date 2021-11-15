@@ -3,10 +3,11 @@
 #include <iostream>
 #include <vector>
 #include <string>
-
-
 #include <chrono>
 #include <random>
+
+
+int ACCURACY = 1000;  // the number of guesses for each data point
 
 struct Extrema
 {
@@ -87,11 +88,10 @@ int main(int argc, char const *argv[])
     std::mt19937 generate(rand());
     std::uniform_int_distribution<> dist(extrema.min, extrema.max);
 
-    int length = data.size();
-    int guess = 0, dataPoint = 0;
-    double hit = 0; // total hits
-    int accuracy = 100; // the number of guesses for each data point
-    double totalGuesses = accuracy * length; // the number of guesses we will make
+    int length = data.size(); // number of data points
+    int guess = 0, dataPoint = 0; // init empty vars
+    double totalHits = 0; // total totalHits 
+    double totalGuesses = ACCURACY * length; // the number of guesses we will make
     double area = extrema.max * length; // the total area of the data 
 
     for (int i = 0; i < length; i++)
@@ -99,20 +99,20 @@ int main(int argc, char const *argv[])
 
         dataPoint = std::stoi(data.at(i).at(1));
 
-        for (int i = 0; i < accuracy; i++)
+        for (int i = 0; i < ACCURACY; i++)
         {
 
             guess = dist(generate);
 
             if (guess < dataPoint)
             {
-                hit++;
+                totalHits++;
             }
         }
-        std::cout << "index: " << i << " | point: " << dataPoint << " | hits: " << hit << std::endl;
+        std::cout << "index: " << i << " | point: " << dataPoint << " | hits: " << totalHits << std::endl;
     }
 
-    double ratio = hit / totalGuesses;
+    double ratio = totalHits / totalGuesses;
 
     std::cout << "======== REPORT =========" << std::endl;
 
@@ -120,9 +120,9 @@ int main(int argc, char const *argv[])
     std::cout << "min: " << extrema.min << std::endl;
     std::cout << "area: " << area << std::endl;
 
-    std::cout << "length: " << length << " | accuracy: " << accuracy << " | Total guesses: " << totalGuesses << std::endl;
+    std::cout << "length: " << length << " | accuracy: " << ACCURACY << " | Total guesses: " << totalGuesses << std::endl;
 
-    std::cout << "Ratio: " << ratio << " | Hits: " << hit <<
+    std::cout << "Ratio: " << ratio << " | Hits: " << totalHits <<
 
         std::endl;
     
