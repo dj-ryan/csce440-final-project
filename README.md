@@ -6,6 +6,13 @@
 - Sajal Risal
 - David Ryan
 
+## Data:
+
+![Altitude annotated](https://github.com/shahar603/Telemetry-Data/blob/master/SpaceX%20CRS-16/Graphs/Altitude%20annotated.png)
+
+
+
+## Project Details
 This project can be done as a group project with two or three students in a group.
 1. (15 points) Data Collection: Select any topic that you are interested in.
 Regarding this topic find some suitable data. This could be any data of your
