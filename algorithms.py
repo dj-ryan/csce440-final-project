@@ -87,8 +87,24 @@ def plug_points(coeffs, xpoint):
         y_value += coeffs[i] * (xpoint ** i)
     return y_value
 
-def average_error(y1, y2):
-    m = len(y1)
-    diff = np.absolute(np.array(y1) - np.array(y2))
-    diff_sum = np.sum(diff)
-    return diff_sum/m
+def generate_points_from_line(coeffs, x):
+    m = len(x)
+    y = np.empty(shape=(m, 1))
+    for i in range(m):
+        y[i] = plug_points(coeffs, x[i])
+    return y
+
+def r_squared(x, y1, y2):
+    mean_y = np.mean(y1)
+    sum_squared_err_with_line = np.sum((y1-y2)**2)
+    sum_squared_from_mean_y = np.sum((y1-mean_y)**2)
+    print(mean_y)
+    print(sum_squared_err_with_line)
+    print(sum_squared_from_mean_y)
+    return 1 - (sum_squared_err_with_line/sum_squared_from_mean_y)
+
+def plot_points(x, y, coeffs, TEST_RUNS, line_color, plt):
+    for i in range(TEST_RUNS):
+        x[i] = i
+        y[i] = plug_points(coeffs, i)
+    plt.plot(x, y, color=line_color)
