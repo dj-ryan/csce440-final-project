@@ -3,7 +3,9 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <map>
 
+int SUBINTERVALS = 100;
 
 std::vector<std::string> readCSVRow(const std::string &row)
 {
@@ -43,6 +45,27 @@ std::vector<std::vector<std::string>> readCSV(std::istream &in)
     return table;
 }
 
+double simpsonsEstimation(int baseValue, int width)
+{
+
+    return 1;
+}
+
+std::map<int, int> dataToMap(int length)
+{
+
+    std::map<int, int> dataMap;
+
+    dataMap.insert({0,0});
+
+    for (int i = 0; i < length; i++)
+    {
+        dataMap.insert({i, 0});
+    }
+    
+
+    return dataMap;
+}
 
 int main(int argc, char const *argv[])
 {
@@ -58,4 +81,7 @@ int main(int argc, char const *argv[])
 
     data = readCSV(is);
 
+    int dataLength = data.size(); // number of data points
+
+    int intervalWidth = dataLength / SUBINTERVALS;
 }
