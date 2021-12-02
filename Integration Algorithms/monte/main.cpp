@@ -96,20 +96,21 @@ int main(int argc, char const *argv[])
 
     for (int i = 0; i < length; i++)
     {
-
+        // Looks up data point and converts it to int
         dataPoint = std::stoi(data.at(i).at(1));
 
         for (int i = 0; i < ACCURACY; i++)
         {
+            // Generates a random guess in-between the limtis
+            guess = dist(generate); 
 
-            guess = dist(generate);
-
-            if (guess < dataPoint)
+            // Checks if the guess is lower then the actually value
+            if (guess < dataPoint) 
             {
-                totalHits++;
+                // Keeps track of all hits
+                totalHits++; 
             }
         }
-        std::cout << "index: " << i << " | point: " << dataPoint << " | hits: " << totalHits << std::endl;
     }
 
     double ratio = totalHits / totalGuesses;

@@ -3,3 +3,6 @@ monte:
 
 clean:
 	rm -f *.out
+
+run:
+	./monte.out
