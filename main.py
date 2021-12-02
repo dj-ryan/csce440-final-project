@@ -8,7 +8,7 @@ import algorithms as algo
 
 # %%
 X_AXIS = 'time'
-Y_AXIS = 'altitude'
+Y_AXIS = 'velocity'
 
 # %%
 #loading excel to dataframe
