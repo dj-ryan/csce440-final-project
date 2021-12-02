@@ -45,22 +45,20 @@ std::vector<std::vector<std::string>> readCSV(std::istream &in)
     return table;
 }
 
-double simpsonsEstimation(int baseValue, int width)
+double simpsonsEstimation(int baseValue, int width, std::map<int, int> dataMap)
 {
-
-    return 1;
+    return (width * (dataMap.at(baseValue) + (4 * dataMap.at(baseValue + width) + dataMap.at(baseValue + (2 * width))))) / 3;
 }
 
-std::map<int, int> dataToMap(int length)
+std::map<int, int> dataToMap(int length, std::vector<std::vector<std::string>> data)
 {
 
     std::map<int, int> dataMap;
 
-    dataMap.insert({0,0});
 
     for (int i = 0; i < length; i++)
     {
-        dataMap.insert({i, 0});
+        dataMap.insert({i, std::stoi(data[i][1])});
     }
     
 
@@ -84,4 +82,13 @@ int main(int argc, char const *argv[])
     int dataLength = data.size(); // number of data points
 
     int intervalWidth = dataLength / SUBINTERVALS;
+
+    std::map<int, int> dataMap = dataToMap(dataLength, data);
+
+    // for(std::pair<int, int> x : dataMap) {
+    //     std::cout << x.first << " | " << x.second << std::endl;
+    // }
+
+
+
 }
