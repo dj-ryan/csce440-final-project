@@ -10,7 +10,7 @@
 
 ### Sajal Risal
 1. In `Interpolation Algorithms` open main.py and algorithms.py
-2. Install necessary libraries if it says "module not found"
+2. Install necessary libraries listed at the top if it says "x module not found" using `pip install x`
 3. Run Jupyter notebook cells in main.py from top to bottom
 
 ### Bethany Krull
