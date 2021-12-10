@@ -6,6 +6,19 @@
 - Sajal Risal
 - David Ryan
 
+## How to Run the scripts
+
+### Bethany Krull
+
+### Bethany Krull
+
+### David Ryan
+1. In `Integration Algorithms\monte` directory
+
+
+
+
+
 ## Data:
 
 This data is from the SpaceX CRS-16 launch of the Falcon 9 rocket. 
@@ -19,6 +32,9 @@ This data is from the SpaceX CRS-16 launch of the Falcon 9 rocket.
 
 
 ![Altitude annotated](https://github.com/shahar603/Telemetry-Data/blob/master/SpaceX%20CRS-16/Graphs/Altitude%20annotated.png)
+
+
+
 
 
 
