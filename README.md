@@ -11,12 +11,12 @@
 ### Bethany Krull
 
 ### Bethany Krull
+1. Under 'Interpolation Algorithms' open alg.m 
+2. In order to run the program you should only need to click 'Run' (if on Matlab) - however it communicates with the data.xlsx file under 'Interpolation Algorithms' so make sure those are in the same directory when you try to run the alg.m file
+3. As is, the program is set up to plot a graph of the interpolation and display the r-squared value - there are sections commented out that store the piecewise function into a matrix for further calculations - but I have commented them out to help the programs run time/keep it from crashing/etc.
 
 ### David Ryan
-1. In `Integration Algorithms\monte` directory run make which should compile a fresh version of the program
-2. This was developed for mac which uses the `.out` extension. If Windows is desired change the extension in the make file to `.exe` and run make again
-3. The executable can then be run using `./monte.out` or `./monte.exe` for windows.
-4. The accuracy variable at the top of the file can be changed to increase or decrease the number of guesses. The file must be re-compiled if this is done.  
+1. In `Integration Algorithms\monte` directory
 
 
 
