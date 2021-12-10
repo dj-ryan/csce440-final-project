@@ -31,10 +31,10 @@ for i = 1:inc:size-inc
     predictedY = subs(equ,x,(data(i+inc/errorSamp,1)));
     actualY = data((i+inc/errorSamp),3);
     SSE = SSE + ((actualY - predictedY)^2);
-    disp(actualY - predictedY);
+    %disp(actualY - predictedY);
 
     SST = SST + ((actualY - avgY)^2);
-    disp(actualY - avgY);
+    %disp(actualY - avgY);
 
     %disp(equ);
     %integer = subs(equ,x,0);
