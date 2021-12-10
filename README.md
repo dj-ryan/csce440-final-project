@@ -9,7 +9,7 @@
 ## How to Run the scripts
 
 ### Sajal Risal
-1. In 'Interpolation Algorithms' open main.py and algorithms.py
+1. In `Interpolation Algorithms` open main.py and algorithms.py
 2. Install necessary libraries if it says "module not found"
 3. Run Jupyter notebook cells in main.py from top to bottom
 
