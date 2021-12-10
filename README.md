@@ -6,6 +6,10 @@
 - Sajal Risal
 - David Ryan
 
+## Youtube Video Link
+https://youtu.be/8kE6lxpiKIg
+NOTE: There is a downloadable mp4 file included in case the youtube link does not work.
+
 ## How to Run the scripts
 
 ### Sajal Risal
