@@ -5,7 +5,6 @@
 
 clear("SSE","x","sumY","size","rSqd","predictedY","inc","i","errorSamp","equ","dataT","data","avgY","actualY","SST");
 
-%dataT = readtable('data.xlsx','Range','A1:C1000');
 dataT = readtable('data.xlsx');
 data = table2array(dataT);
 size = length(data);
@@ -42,11 +41,11 @@ for i = 1:inc:size-inc
     %y(i,1) = integer;             %Ax + y
     %A(i,1) = subs((equ - integer),x,1);
     
-    %fplot(equ,[data(i,1),data(i+inc,1)]);
-    %hold on;
+    fplot(equ,[data(i,1),data(i+inc,1)]);
+    hold on;
 end
-%hold off;
-%shg;
+hold off;
+shg;
 
 
 
