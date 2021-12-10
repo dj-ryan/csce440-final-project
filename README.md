@@ -13,7 +13,10 @@
 ### Bethany Krull
 
 ### David Ryan
-1. In `Integration Algorithms\monte` directory
+1. In `Integration Algorithms\monte` directory run make which should compile a fresh version of the program
+2. This was developed for mac which uses the `.out` extension. If Windows is desired change the extension in the make file to `.exe` and run make again
+3. The executable can then be run using `./monte.out` or `./monte.exe` for windows.
+4. The accuracy variable at the top of the file can be changed to increase or decrease the number of guesses. The file must be re-compiled if this is done.  
 
 
 
