@@ -8,7 +8,7 @@
 
 ## How to Run the scripts
 
-### Bethany Krull
+### Sajal Risal
 
 ### Bethany Krull
 1. Under 'Interpolation Algorithms' open alg.m 
